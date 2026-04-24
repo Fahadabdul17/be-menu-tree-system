@@ -16,11 +16,13 @@ RUN CGO_ENABLED=0 GOOS=linux go build -o main cmd/api/main.go
 # Final stage
 FROM alpine:latest
 
+# Install tzdata for timezone support
+RUN apk add --no-cache tzdata
+
 WORKDIR /root/
 
-# Copy binary and .env
+# Copy binary
 COPY --from=builder /app/main .
-COPY --from=builder /app/.env .
 COPY --from=builder /app/docs ./docs
 
 # Expose port
