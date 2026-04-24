@@ -7,7 +7,7 @@ services:
       - DB_HOST=db
       - DB_PORT=5432
       - DB_USER=postgres
-      - DB_PASSWORD=postgres
+      - DB_PASSWORD=170603
       - DB_NAME=menu_tree_db
       - PORT=8080
       - GIN_MODE=debug
@@ -19,7 +19,7 @@ services:
     image: postgres:15-alpine
     environment:
       - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_PASSWORD=170603
       - POSTGRES_DB=menu_tree_db
     ports:
       - "5432:5432"
