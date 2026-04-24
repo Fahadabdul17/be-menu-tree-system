@@ -23,11 +23,13 @@ A production-ready hierarchical menu management system built with **Go**, **Gin*
 ## 📦 Getting Started
 
 ### Prerequisites
+
 - [Docker](https://www.docker.com/get-started) and [Docker Compose](https://docs.docker.com/compose/install/)
 - [Go 1.25+](https://go.dev/dl/) (if running manually)
 - [PostgreSQL](https://www.postgresql.org/) (if running manually)
 
 ### 1. Using Docker (Recommended)
+
 This will set up both the Go API and the PostgreSQL database automatically.
 
 ```bash
@@ -38,10 +40,12 @@ cd be-menu-tree-system
 # Start the application and database
 docker-compose up --build
 ```
+
 - API Endpoint: `http://localhost:8080/api`
 - Swagger UI: `http://localhost:8080/swagger/index.html`
 
 ### 2. Manual Setup
+
 1.  **Environment Variables**: Copy `.env.example` to `.env` and configure your database credentials.
     ```bash
     cp .env.example .env
@@ -58,15 +62,15 @@ docker-compose up --build
 
 ## 🛤 API Endpoints
 
-| Method | Endpoint | Description |
-| :--- | :--- | :--- |
-| `GET` | `/api/menus` | Get the full hierarchical menu tree |
-| `POST` | `/api/menus` | Create a new menu item |
-| `GET` | `/api/menus/:id` | Get a single menu item by ID |
-| `PUT` | `/api/menus/:id` | Update a menu item |
-| `DELETE` | `/api/menus/:id` | Delete a menu item and all its descendants |
-| `PATCH` | `/api/menus/:id/move` | Move a menu to a new parent |
-| `PATCH` | `/api/menus/:id/reorder` | Update the sorting order of a menu item |
+| Method   | Endpoint                 | Description                                |
+| :------- | :----------------------- | :----------------------------------------- |
+| `GET`    | `/api/menus`             | Get the full hierarchical menu tree        |
+| `POST`   | `/api/menus`             | Create a new menu item                     |
+| `GET`    | `/api/menus/:id`         | Get a single menu item by ID               |
+| `PUT`    | `/api/menus/:id`         | Update a menu item                         |
+| `DELETE` | `/api/menus/:id`         | Delete a menu item and all its descendants |
+| `PATCH`  | `/api/menus/:id/move`    | Move a menu to a new parent                |
+| `PATCH`  | `/api/menus/:id/reorder` | Update the sorting order of a menu item    |
 
 ## 🏗 Architecture
 
@@ -81,12 +85,9 @@ The project follows the **Clean Architecture** pattern to ensure testability and
 
 ## 📸 Screenshots & Demos
 
-### Architecture Overview
-![Architecture Diagram](architecture_diagram.png)
-
 ### API Documentation (Swagger)
-![Swagger UI Placeholder](https://raw.githubusercontent.com/swaggo/swag/master/assets/swagger-ui.png)
-*(Run the application and visit `/swagger/index.html` to see the interactive documentation)*
+
+![Swagger Ui Placeholder](image.png)
 
 ## 🧪 Testing
 
