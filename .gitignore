@@ -1,0 +1,25 @@
+# Binaries
+bin/
+main
+api.exe
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Dependency directories
+vendor/
+
+# Environment variables
+.env
+
+# Docker
+.dockerignore
+
+# IDEs
+.vscode/
+.idea/
+
+# Logs
+*.log
